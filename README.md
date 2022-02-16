@@ -1,4 +1,9 @@
 <h2 align="center">VueSortableTable</h2>
+    <img 
+      src="https://imgur.com/c5qFyov" 
+      alt="Props To Data"
+      style="max-width: 100%;border-radius: 50%;height: 150px;width: 150px;">
+
 
 ## Table of Contents
 - [Introduction](#introduction)
