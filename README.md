@@ -7,6 +7,7 @@
 - [Usage](#usage)
 - [Configuration](#configuration)
 - [Events](#events)
+- [Slots](#slots)
 - [Example](#example)
 
 ## Introduction <a name = "introduction"></a>
@@ -48,6 +49,15 @@ import VueSortableTable from 'vue-sortable-ele'
 | Event               | Description                   |
 |---------------------|------------------------------|
 | pageChanged         | Event occer when click on pagination links  |
+
+
+## Slots <a name = "slots"></a>
+
+| Slot                | Data                   | Default                                  | Description            |
+|---------------------|------------------------|------------------------------------------|
+| table-header        |                        |                                          | Slot that opens on top of the table.  |
+| table-head          |                        | Renders table heading from columns prop. | Slot that opens table heading <thead>.  |
+| table-body          |                        |                                          | Slot that opens table body <tbody>.  |
 
 ## Example <a name = "example"></a>
 ```
