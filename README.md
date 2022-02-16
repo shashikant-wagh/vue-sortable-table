@@ -12,24 +12,24 @@
 ## Introduction <a name = "introduction"></a>
 VueDatatableEle is an Vue 3 sortable/ draggable table component.\
 VueDatatableEle is a MIT-licensed open source project.\
-Tested in Firefox, Safari, Chrome, Opera, Internet Explorer 8+.
+Tested in Firefox, Safari, Chrome, Opera, Internet Explorer 8+. \
 VueSortableTable is lightweight and highly configurable which makes its useful in number of situations.
 
 ## Features <a name = "features"></a>
 * Lightweight.
 * Highly configurable.
-* In built pagination.
+* Pagination.
 * Easily to hooked in on Bootstrap.
 * No jQuery or other dependencies.
 
 ## Installation <a name = "install"></a>
 ```
-npm install vue-datatable-ele
+npm install vue-sortable-ele
 ```
 
 ## Usage <a name = "usage"></a>
 ```
-import VueDatatableEle from 'vue-datatable-ele'
+import VueSortableTable from 'vue-sortable-ele'
 ```
 
 ## Configuration <a name = "configuration"></a>
@@ -40,8 +40,8 @@ import VueDatatableEle from 'vue-datatable-ele'
 | columns             | Array         | Array of table column names.  |
 | actions             | Object        | Array of table actions if any, check the example below for the defination.|
 | paginate            | Object        | Data required for pagination, check the example below for the defination.|
-| tableClass          | String        | Custom table class            |
-| withoutPagination   | Boolean       | Removes pagination from table |
+| tableClass          | String        | Custom table class.            |
+| withPagination      | Boolean       | Adds pagination to table. |
 
 ## Events <a name = "events"></a>
 
@@ -52,7 +52,7 @@ import VueDatatableEle from 'vue-datatable-ele'
 ## Example <a name = "example"></a>
 ```
 <template>
-    <vue-datatable-ele
+    <vue-sortable-table
         v-model="records"
         :columns="columns"
         :actions="actions"
@@ -69,8 +69,13 @@ import VueDatatableEle from 'vue-datatable-ele'
         </template>
 
         <template v-slot:table-body="{showColumn, showAction}">
-            <tr v-for="(record, index) in records">
-                <td v-if="showAction('edit')">
+            <tr
+                v-for="(record, index) in records"
+                class="table-row"
+            >
+                <td
+                    v-if="showAction('edit')"
+                    class="drag">
                     <a href="">Edit</a>
                 </td>
                 <td v-if="showAction('delete')">
@@ -87,15 +92,16 @@ import VueDatatableEle from 'vue-datatable-ele'
                 <td v-if="showColumn('Email')"> {{ record.email }} </td>
             </tr>
         </template>
-    </vue-datatable-ele>
+    </vue-sortable-table>
 </template>
 
 
 <script>
-    import VueDatatableEle from 'vue-datatable-ele'
+
+    import VueSortableTable from './components/VueSortableTable'
 
     export default {
-        components: {VueDatatableEle},
+        components: {VueSortableTable},
 
         data() {
             return {
@@ -112,26 +118,31 @@ import VueDatatableEle from 'vue-datatable-ele'
                 paginate: {
                     page: 1,
                     limit: 6,
-                    total: 0,
+                    total: 10,
                 },
-                records: [],
+                records: [{
+                    "id": 7,
+                    "email": "michael.lawson@reqres.in",
+                    "first_name": "Michael",
+                    "last_name": "Lawson",
+                    "avatar": "https://reqres.in/img/faces/7-image.jpg"
+                }, {
+                    "id": 8,
+                    "email": "lindsay.ferguson@reqres.in",
+                    "first_name": "Lindsay",
+                    "last_name": "Ferguson",
+                    "avatar": "https://reqres.in/img/faces/8-image.jpg"
+                }, {
+                    "id": 9,
+                    "email": "tobias.funke@reqres.in",
+                    "first_name": "Tobias",
+                    "last_name": "Funke",
+                    "avatar": "https://reqres.in/img/faces/9-image.jpg"
+                }],
             }
-        },
-
-        watch: {
-            'paginate.page': 'fetch'
-        },
-
-        methods: {
-            fetch() {
-                // fetch and set records.
-            }
-        },
-
-        created() {
-            this.fetch();
         }
     }
 
 </script>
+
 ```
