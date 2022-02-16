@@ -53,11 +53,11 @@ import VueSortableTable from 'vue-sortable-ele'
 
 ## Slots <a name = "slots"></a>
 
-| Slot                | Data                   | Default                                  | Description            |
-|---------------------|------------------------|------------------------------------------|
-| table-header        |                        |                                          | Slot that opens on top of the table.  |
-| table-head          |                        | Renders table heading from columns prop. | Slot that opens table heading <thead>.  |
-| table-body          |                        |                                          | Slot that opens table body <tbody>.  |
+| Name                | Data                   | Default Action                           | Description                             |
+|---------------------|------------------------|------------------------------------------|-----------------------------------------|
+| table-header        |                        |                                          | Opens on top of the table.    |
+| table-head          | showColumn, showAction | Renders table heading from columns prop. | Opens table heading <thead>.  |
+| table-body          |                        |                                          | Opens table body <tbody>.     |
 
 ## Example <a name = "example"></a>
 ```
