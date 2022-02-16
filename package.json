@@ -1,6 +1,6 @@
 {
   "name": "vue-sortable-table",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
   "main": "dist/vue-sortable-table.ssr.js",
   "browser": "dist/vue-sortable-table.esm.js",
@@ -56,5 +56,9 @@
   },
   "engines": {
     "node": ">=12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shashikant-wagh/vue-sortable-table.git"
   }
 }
