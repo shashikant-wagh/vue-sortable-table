@@ -29,7 +29,9 @@
   ],
   "author": "Wagh Shashikant S. <shashikantwagh721@gmail.com>",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "sortablejs": "^1.14.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
