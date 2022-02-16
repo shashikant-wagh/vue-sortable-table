@@ -1,6 +1,6 @@
 {
   "name": "vue-sortable-table",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/vue-sortable-table.ssr.js",
   "browser": "dist/vue-sortable-table.esm.js",
@@ -30,7 +30,8 @@
   "author": "Wagh Shashikant S. <shashikantwagh721@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "sortablejs": "^1.14.0"
+    "sortablejs": "^1.14.0",
+    "vue-datatable-ele": "^1.0.7"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
