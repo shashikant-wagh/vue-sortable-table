@@ -26,12 +26,12 @@ VueSortableTable is lightweight and highly configurable which makes its useful i
 
 ## Installation <a name = "install"></a>
 ```
-npm install vue-sortable-ele
+npm install vue-sortable-table
 ```
 
 ## Usage <a name = "usage"></a>
 ```
-import VueSortableTable from 'vue-sortable-ele'
+import VueSortableTable from 'vue-sortable-table'
 ```
 
 ## Props <a name = "props"></a>
@@ -235,7 +235,7 @@ import VueSortableTable from 'vue-sortable-ele'
 
 <script>
 
-    import VueSortableTable from './components/VueSortableTable'
+    import VueSortableTable from 'vue-sortable-table'
 
     export default {
         components: {VueSortableTable},
