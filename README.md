@@ -183,8 +183,8 @@ import VueSortableTable from 'vue-sortable-ele'
 | Name                | Data                   | Default Action                           | Description                             |
 |---------------------|------------------------|------------------------------------------|-----------------------------------------|
 | table-header        |                        |                                          | Opens on top of the table.    |
-| table-head          | showColumn, showAction | Renders table heading from columns prop. | Opens table heading <thead>.  |
-| table-body          |                        |                                          | Opens table body <tbody>.     |
+| table-head          | showColumn, showAction | Renders table heading from columns prop. | Opens table heading thead.  |
+| table-body          |                        |                                          | Opens table body tbody.     |
 
 ## Example <a name = "example"></a>
 ```
